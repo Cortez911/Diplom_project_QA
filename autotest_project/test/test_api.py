@@ -11,7 +11,6 @@ book_id = "harry-potter-and-the-philosophers-stone-in-reading-order-1-2444651"
 @allure.story("Получение списка книг")
 @pytest.mark.api_test
 @pytest.mark.positive_test
-
 def test_get_books():
     headers = {
         'content-type': 'application/json',
