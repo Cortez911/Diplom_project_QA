@@ -28,11 +28,11 @@ def test_open_site(browser):
 @allure.severity("blocker")
 @pytest.mark.ui_test
 @pytest.mark.positive_test
-def test_search_book_rus_ui(browser):
+def test_search_book_ui(browser):
     with allure.step("Открытие веб-страницы в Chrome, поиск книги на кириллице"):
         main_page = MainPage(browser)
         main_page.set_cookie_policy()
-        text = main_page.search_book_rus_ui('Гарри Поттер')
+        text = main_page.search_book_ui('Гарри Поттер')
         assert text.startswith("Показываем результаты по запросу «гарри поттер»")
 
 @allure.title("Поиск книги на латинице")
@@ -41,11 +41,11 @@ def test_search_book_rus_ui(browser):
 @allure.severity("blocker")
 @pytest.mark.ui_test
 @pytest.mark.positive_test
-def test_search_book_eng_ui(browser):
+def test_search_book_ui(browser):
     with allure.step("Открытие веб-страницы в Chrome, поиск книги на латинице"):
         main_page = MainPage(browser)
         main_page.set_cookie_policy()
-        text = main_page.search_book_eng_ui('Harry Potter')
+        text = main_page.search_book_ui('Harry Potter')
         assert text.startswith("Показываем результаты по запросу «harry potter»")
 
 @allure.title("Поиск по символам ")
